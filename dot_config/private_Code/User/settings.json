@@ -1,0 +1,45 @@
+{
+    "chat.disableAIFeatures": true,
+    "workbench.colorTheme": "GitHub Dark Default",
+    "window.controlsStyle": "hidden",
+    "window.commandCenter": false,
+    "window.menuBarVisibility": "toggle",
+    "git.autoStash": true,
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "/usr/bin/latexmk",
+            "args": [
+                "-pdf",
+                "-interaction=nonstopmode",
+                "-synctex=1",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipe.default": "first",
+    "latex-workshop.view.pdf.viewer": "external",
+    "latex-workshop.view.pdf.external.viewer.command": "/usr/bin/sioyek",
+    "latex-workshop.view.pdf.external.viewer.args": [
+        "--reuse-window",
+        "%PDF%"
+    ],
+    "zenMode.fullScreen": false,
+    "zenMode.centerLayout": false,
+    "zenMode.showTabs": "none",
+    "zenMode.hideLineNumbers": false,
+    "window.menuStyle": "native",
+    "window.titleBarStyle": "native",
+    "workbench.layoutControl.enabled": false,
+    "workbench.activityBar.location": "top",
+    "window.customTitleBarVisibility": "never"
+}

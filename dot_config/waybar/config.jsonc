@@ -1,0 +1,61 @@
+{
+  "include": [
+    "/home/anatoliyi/.config/waybar/tray.jsonc"
+  ],
+  "name": "river-bar",
+  "layer": "top",
+  "position": "top",
+  "exclusive": true,
+  "passthrough": false,
+  "height": 32,
+  "spacing": 0,
+  "modules-left": [
+    "river/tags"
+  ],
+  "modules-center": [
+    "river/window"
+  ],
+  "modules-right": [
+    "group/tray-drawer",
+    "custom/status"
+  ],
+  "river/tags": {
+    "num-tags": 9,
+    "tag-labels": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "disable-click": false,
+    "hide-vacant": false
+  },
+  "group/tray-drawer": {
+    "orientation": "inherit",
+    "drawer": {
+      "click-to-reveal": true,
+      "transition-duration": 0,
+      "children-class": "tray-child",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/tray-toggle",
+      "tray"
+    ]
+  },
+  "custom/tray-toggle": {
+    "exec": "sh /home/anatoliyi/.config/waybar/tray-state.sh json",
+    "return-type": "json",
+    "signal": 9,
+    "on-click-release": "sh /home/anatoliyi/.config/waybar/tray-toggle.sh",
+    "hide-empty-text": true,
+    "tooltip": false
+  },
+  "river/window": {
+    "format": "{}",
+    "max-length": 120
+  },
+  "custom/status": {
+    "exec": "/home/anatoliyi/.config/waybar/status.sh",
+    "interval": 1,
+    "signal": 10,
+    "format": "{text}",
+    "escape": false,
+    "tooltip": false
+  }
+}

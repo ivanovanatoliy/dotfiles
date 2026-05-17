@@ -1,0 +1,31 @@
+{
+    "files.associations": {
+        "renv.lock": "json"
+    },
+    "remoteSSH.enableAgentForwarding": false,
+    "window.menuStyle": "native",
+    "window.controlsStyle": "hidden",
+    "positron.assistant.enable": true,
+    "remote.autoForwardPortsSource": "hybrid",
+    "workbench.colorTheme": "cursor-dark",
+    "positron.assistant.provider.openAI.enable": true,
+    "window.titleBarStyle": "native",
+    "positron.assistant.notebook.ghostCellSuggestions.enabled": true,
+    "workbench.activityBar.location": "top",
+    "zenMode.centerLayout": false,
+    "zenMode.fullScreen": false,
+    "zenMode.showTabs": "none",
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideActivityBar": false,
+    "markdown.preview.fontSize": 20,
+    "editor.fontSize": 16,
+    "positron.notebook.enabled": true,
+    "remoteSSH.defaultExtensions": [
+        "openai.chatgpt"
+    ],
+    "breadcrumbs.enabled": false,
+    "window.menuBarVisibility": "toggle",
+    "window.customTitleBarVisibility": "never",
+    "notebook.markup.fontSize": 16,
+    "workbench.topActionBar.visible": false,
+}

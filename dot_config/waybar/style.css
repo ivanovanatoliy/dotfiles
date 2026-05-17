@@ -1,0 +1,98 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 17px;
+  min-height: 0;
+}
+
+window#waybar.river-bar {
+  background: #080808;
+  color: #eeeeee;
+  border: none;
+}
+
+button {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+button:hover {
+  background: inherit;
+  box-shadow: none;
+}
+
+#tags,
+#window,
+#custom-status,
+#group-tray-drawer,
+#custom-tray-toggle,
+#tray {
+  background: #080808;
+  color: #eeeeee;
+  min-height: 32px;
+}
+
+#tags button {
+  padding: 0 10px;
+  background: #080808;
+  color: #878787;
+  font-weight: 400;
+}
+
+#tags button.occupied {
+  color: #d0d0d0;
+  font-weight: 900;
+}
+
+#tags button.focused {
+  background: #222222;
+  color: #eeeeee;
+}
+
+#tags button.urgent {
+  background: #770000;
+  color: #eeeeee;
+}
+
+#group-tray-drawer {
+  background: #080808;
+}
+
+#custom-tray-toggle {
+  padding: 0 4px 0 10px;
+  color: #eeeeee;
+  background: #080808;
+  min-width: 0;
+}
+
+#tray {
+  padding: 0;
+  background: #080808;
+}
+
+#group-tray-drawer .tray-child {
+  margin-left: 0;
+}
+
+#tray > .passive,
+#tray > .active,
+#tray > .needs-attention {
+  margin: 0 8px 0 0;
+}
+
+#window {
+  padding: 0 10px;
+  color: #eeeeee;
+  background: #080808;
+}
+
+#window.empty {
+  color: #878787;
+}
+
+#custom-status {
+  padding: 0 10px;
+  background: #080808;
+}

@@ -1,0 +1,6 @@
+0000000000000000000000000000000000000000 7e8aa95e0d31cf63336147c38c0acecde8492742 Anatoliy <ivanov.an.se@gmail.com> 1750578502 +0500	clone: from https://github.com/ivanovanatoliy/nvim-configuration.git
+7e8aa95e0d31cf63336147c38c0acecde8492742 6f707602fbfab3613f1e9136a7b14c42bf3fa0d9 Anatoliy <ivanov.an.se@gmail.com> 1757953767 +0500	commit: leetcode removed
+6f707602fbfab3613f1e9136a7b14c42bf3fa0d9 1778924895cca71526070741ce301185d596c6a9 Anatoliy <ivanov.an.se@gmail.com> 1776928891 +0500	commit: clean up, vim pack
+1778924895cca71526070741ce301185d596c6a9 7f1297b66000e83b19f3249371dd92b69df514b3 Anatoliy <ivanov.an.se@gmail.com> 1777010106 +0500	pull: Fast-forward
+7f1297b66000e83b19f3249371dd92b69df514b3 f1486ef3fcd115111a19a6d06336318618cc8c13 Anatoliy <ivanov.an.se@gmail.com> 1777056542 +0500	commit: minimal typst
+f1486ef3fcd115111a19a6d06336318618cc8c13 633662bed3520ad9710c59b8faaa6c59cf076b89 Anatoliy <ivanov.an.se@gmail.com> 1777288132 +0500	commit: typst preview
