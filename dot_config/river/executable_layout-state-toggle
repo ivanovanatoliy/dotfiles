@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+set -eu
+
+runtime_dir="${XDG_RUNTIME_DIR:-/tmp}"
+state_file="${runtime_dir}/river_layout_state"
+current="EN"
+
+if [ -r "$state_file" ]; then
+	read -r current <"$state_file" || current="EN"
+fi
+
+case "$current" in
+EN) next="RU" ;;
+*) next="EN" ;;
+esac
+
+printf '%s\n' "$next" >"$state_file"
+pkill -RTMIN+10 waybar >/dev/null 2>&1 || true

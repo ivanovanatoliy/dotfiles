@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+set -eu
+
+geometry="$(slurp)"
+[ -n "$geometry" ] || exit 0
+
+tmp_png="$(mktemp /tmp/satty-shot-XXXXXX.png)"
+cleanup() {
+	rm -f "$tmp_png"
+}
+trap cleanup EXIT INT TERM
+
+if ! grim -g "$geometry" "$tmp_png"; then
+	exit 1
+fi
+
+exec satty \
+	--filename "$tmp_png" \
+	--resize smart \
+	--floating-hack \
+	--output-filename - \
+	--copy-command "wl-copy --type image/png" \
+	--actions-on-enter save-to-clipboard,exit \
+	--actions-on-escape exit

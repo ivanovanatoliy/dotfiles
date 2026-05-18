@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+
+action="${1:-}"
+
+case "$action" in
+up) brightnessctl set +5% >/dev/null ;;
+down) brightnessctl set 5%- >/dev/null ;;
+*) exit 1 ;;
+esac
+
+brightness="$(
+	brightnessctl -m 2>/dev/null \
+	| awk -F, 'NR==1 { gsub(/%/, "", $4); print $4 }'
+)"
+
+[ -n "$brightness" ] || brightness=0
+
+dunstify \
+	-a "brightness" \
+	-u low \
+	-h "string:x-dunst-stack-tag:brightness" \
+	-h "int:value:${brightness}" \
+	"Brightness" "${brightness}%"

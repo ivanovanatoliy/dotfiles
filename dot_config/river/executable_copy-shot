@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+set -eu
+
+geometry="$(slurp)"
+[ -n "$geometry" ] || exit 0
+
+grim -g "$geometry" - | wl-copy --type image/png
+
+if command -v notify-send >/dev/null 2>&1; then
+	notify-send "Screenshot copied" "Selected area copied to clipboard"
+fi

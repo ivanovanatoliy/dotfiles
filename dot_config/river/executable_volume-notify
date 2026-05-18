@@ -1,0 +1,44 @@
+#!/usr/bin/env sh
+set -eu
+
+runtime_dir="${XDG_RUNTIME_DIR:-/tmp}"
+volume_state_file="${runtime_dir}/waybar_volume_state"
+
+write_volume_state() {
+	muted="$(pamixer --get-mute 2>/dev/null || printf true)"
+	volume="$(pamixer --get-volume 2>/dev/null || printf 0)"
+
+	if [ "$muted" = "true" ]; then
+		text="Muted"
+		state_value="0%"
+		volume=0
+	else
+		text="${volume}%"
+		state_value="${volume}%"
+	fi
+
+	printf '%s\n' "$state_value" >"$volume_state_file"
+	pkill -RTMIN+10 waybar >/dev/null 2>&1 || true
+}
+
+action="${1:-}"
+
+case "$action" in
+up) pamixer -i 5 ;;
+down) pamixer -d 5 ;;
+toggle) pamixer --toggle-mute ;;
+sync)
+	write_volume_state
+	exit 0
+	;;
+*) exit 1 ;;
+esac
+
+write_volume_state
+
+dunstify \
+	-a "volume" \
+	-u low \
+	-h "string:x-dunst-stack-tag:volume" \
+	-h "int:value:${volume}" \
+	"Volume" "$text"
