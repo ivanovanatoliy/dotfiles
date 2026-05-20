@@ -45,14 +45,13 @@ volume() {
 }
 
 keymap() {
-	if [ -r "$layout_state_file" ]; then
-		read -r state <"$layout_state_file" || state=""
-		if [ -n "$state" ]; then
-			printf '%s' "$state"
-			return
-		fi
+	line="$(mmsg -g -k 2>/dev/null | head -n1)"
+	layout="${line#*kb_layout }"
+	if [ "$layout" = "ru" ]; then
+		echo "RU"
+	else
+		echo "EN"
 	fi
-	printf 'EN'
 }
 
 clock_text() {

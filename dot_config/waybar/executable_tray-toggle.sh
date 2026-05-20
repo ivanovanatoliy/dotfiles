@@ -2,6 +2,10 @@
 set -eu
 state_file="${XDG_RUNTIME_DIR:-/tmp}/waybar-tray-state"
 
+if ! sh "$HOME/.config/waybar/tray-state.sh" has-icons; then
+  exit 0
+fi
+
 state="collapsed"
 if [ -r "$state_file" ]; then
   read -r state < "$state_file"

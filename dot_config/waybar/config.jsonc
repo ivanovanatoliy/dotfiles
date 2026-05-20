@@ -1,6 +1,6 @@
 {
   "include": [
-    "/home/anatoliyi/.config/waybar/tray.jsonc"
+    "tray.jsonc"
   ],
   "name": "river-bar",
   "layer": "top",
@@ -10,10 +10,10 @@
   "height": 32,
   "spacing": 0,
   "modules-left": [
-    "river/tags"
+    "dwl/tags"
   ],
   "modules-center": [
-    "river/window"
+    "dwl/window"
   ],
   "modules-right": [
     "group/tray-drawer",
@@ -29,7 +29,7 @@
     "orientation": "inherit",
     "drawer": {
       "click-to-reveal": true,
-      "transition-duration": 0,
+      "transition-duration": 160,
       "children-class": "tray-child",
       "transition-left-to-right": false
     },
@@ -39,10 +39,11 @@
     ]
   },
   "custom/tray-toggle": {
-    "exec": "sh /home/anatoliyi/.config/waybar/tray-state.sh json",
+    "exec": "sh -c 'exec \"$HOME/.config/waybar/tray-state.sh\" json'",
     "return-type": "json",
+    "interval": 2,
     "signal": 9,
-    "on-click-release": "sh /home/anatoliyi/.config/waybar/tray-toggle.sh",
+    "on-click-release": "sh -c 'exec \"$HOME/.config/waybar/tray-toggle.sh\"'",
     "hide-empty-text": true,
     "tooltip": false
   },
@@ -51,8 +52,8 @@
     "max-length": 120
   },
   "custom/status": {
-    "exec": "/home/anatoliyi/.config/waybar/status.sh",
-    "interval": 1,
+    "exec": "sh -c 'exec \"$HOME/.config/waybar/status.sh\"'",
+    "interval": 0.2,
     "signal": 10,
     "format": "{text}",
     "escape": false,
