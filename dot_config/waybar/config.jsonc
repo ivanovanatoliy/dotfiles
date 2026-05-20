@@ -10,10 +10,10 @@
   "height": 32,
   "spacing": 0,
   "modules-left": [
-    "river/tags"
+    "dwl/tags"
   ],
   "modules-center": [
-    "river/window"
+    "dwl/window"
   ],
   "modules-right": [
     "group/tray-drawer",
@@ -52,7 +52,7 @@
   },
   "custom/status": {
     "exec": "/home/anatoliyi/.config/waybar/status.sh",
-    "interval": 1,
+    "interval": 0.2,
     "signal": 10,
     "format": "{text}",
     "escape": false,
