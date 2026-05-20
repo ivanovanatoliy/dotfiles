@@ -227,9 +227,9 @@ riverctl spawn "swaybg -i $HOME/Pictures/mit_bg.jpg -m fill"
 riverctl spawn "dunst"
 riverctl spawn "blueman-applet"
 riverctl spawn "sh -lc 'if wlr-randr | grep -q \"^DP-1 \"; then wlr-randr --output DP-1 --scale 1.25 --pos 0,0 --output eDP-1 --pos 3072,0; fi'"
-riverctl spawn "sh -lc 'sleep 0.8; exec \"$HOME/.config/waybar/start.sh\"'"
+riverctl spawn "sh -lc 'sleep 0.8; exec \"$HOME/.config/waybar/river-3/start.sh\"'"
 
 riverctl unmap-switch normal lid close 2>/dev/null || true
 riverctl unmap-switch normal lid open 2>/dev/null || true
-riverctl map-switch normal lid close spawn "sh -lc 'powerprofilesctl set power-saver; wlr-randr --output eDP-1 --off; sleep 0.5; exec \"$HOME/.config/waybar/start.sh\"'"
-riverctl map-switch normal lid open  spawn "sh -lc 'wlr-randr --output eDP-1 --on; if wlr-randr | grep -q \"^DP-1 \"; then wlr-randr --output DP-1 --scale 1.25 --pos 0,0 --output eDP-1 --pos 3072,0; fi; powerprofilesctl set performance; sleep 0.5; exec \"$HOME/.config/waybar/start.sh\"'"
+riverctl map-switch normal lid close spawn "sh -lc 'powerprofilesctl set power-saver; wlr-randr --output eDP-1 --off; sleep 0.5; exec \"$HOME/.config/waybar/river-3/start.sh\"'"
+riverctl map-switch normal lid open  spawn "sh -lc 'wlr-randr --output eDP-1 --on; if wlr-randr | grep -q \"^DP-1 \"; then wlr-randr --output DP-1 --scale 1.25 --pos 0,0 --output eDP-1 --pos 3072,0; fi; powerprofilesctl set performance; sleep 0.5; exec \"$HOME/.config/waybar/river-3/start.sh\"'"
