@@ -9,3 +9,6 @@ set fish_greeting
 
 zoxide init fish | source
 starship init fish | source
+
+# Created by `pipx` on 2026-05-20 19:00:50
+set PATH $PATH /home/anatoliy/.local/bin

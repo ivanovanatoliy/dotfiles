@@ -5,7 +5,6 @@ runtime_dir="${XDG_RUNTIME_DIR:-/tmp}"
 label_color="#eeeeee"
 value_color="#878787"
 volume_state_file="${runtime_dir}/waybar_volume_state"
-layout_state_file="${runtime_dir}/river_layout_state"
 
 battery() {
 	if [ -r /sys/class/power_supply/BAT0/capacity ]; then

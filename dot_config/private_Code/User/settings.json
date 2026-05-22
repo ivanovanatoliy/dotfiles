@@ -1,6 +1,4 @@
 {
-    "chat.disableAIFeatures": true,
-    "workbench.colorTheme": "GitHub Dark Default",
     "window.controlsStyle": "hidden",
     "window.commandCenter": false,
     "window.menuBarVisibility": "toggle",
