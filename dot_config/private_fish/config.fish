@@ -7,6 +7,9 @@ alias hx helix
 alias cd z
 set fish_greeting
 
+set -Ux BROWSER helium-browser
+set -Ux TERMINAL foot
+
 zoxide init fish | source
 starship init fish | source
 
