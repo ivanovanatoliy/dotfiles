@@ -44,13 +44,9 @@ volume() {
 }
 
 keymap() {
-	line="$(mmsg -g -k 2>/dev/null | head -n1)"
-	layout="${line#*kb_layout }"
-	if [ "$layout" = "ru" ]; then
-		echo "RU"
-	else
-		echo "EN"
-	fi
+	layout="$(mmsg get keyboardlayout 2>/dev/null | jq -r '.layout // empty')"
+
+	[ "$layout" = "Russian" ] && echo "RU" || echo "EN"
 }
 
 clock_text() {

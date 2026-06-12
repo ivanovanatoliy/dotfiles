@@ -42,7 +42,7 @@
   },
   "custom/status": {
     "exec": "sh -c 'exec \"$HOME/.config/waybar/status.sh\"'",
-    "interval": 5,
+    "interval": 1,
     "signal": 10,
     "format": "{text}",
     "escape": false,

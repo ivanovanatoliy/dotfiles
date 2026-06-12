@@ -27,11 +27,11 @@ vim.cmd("colorscheme kanagawa")
 
 -- Typst preview, starts qutebrowser
 require("typst-preview").setup({
-	open_cmd = "qutebrowser --target tab %s",
+  open_cmd = [[qutebrowser --target tab "%s"]],
 
-	get_root = function(path_of_main_file)
-		return vim.fs.root(path_of_main_file, { ".git", "typst.toml" }) or vim.fn.getcwd()
-	end,
+  get_root = function(path_of_main_file)
+    return vim.fs.root(path_of_main_file, { ".git", "typst.toml" }) or vim.fn.getcwd()
+  end,
 })
 -- Tinymist config
 vim.lsp.config("tinymist", {

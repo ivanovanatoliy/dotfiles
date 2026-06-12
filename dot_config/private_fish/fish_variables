@@ -1,4 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export BROWSER:helium\x2dbrowser
+SETUVAR --export TERMINAL:foot
 SETUVAR __fish_initialized:4300
 SETUVAR fish_user_paths:/home/anatoliy/bin

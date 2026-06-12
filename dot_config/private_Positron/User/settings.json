@@ -24,8 +24,8 @@
         "openai.chatgpt"
     ],
     "breadcrumbs.enabled": false,
-    "window.menuBarVisibility": "toggle",
     "window.customTitleBarVisibility": "never",
     "notebook.markup.fontSize": 16,
     "workbench.topActionBar.visible": false,
+    "window.menuBarVisibility": "toggle",
 }
