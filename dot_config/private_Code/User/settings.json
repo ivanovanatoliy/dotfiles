@@ -39,5 +39,6 @@
     "window.titleBarStyle": "native",
     "workbench.layoutControl.enabled": false,
     "workbench.activityBar.location": "top",
-    "window.customTitleBarVisibility": "never"
+    "window.customTitleBarVisibility": "never",
+    "workbench.colorTheme": "cursor-dark"
 }
