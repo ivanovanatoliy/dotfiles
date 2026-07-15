@@ -7,10 +7,11 @@
   "height": 32,
   "spacing": 0,
   "modules-left": [
-    "dwl/tags"
+    "ext/workspaces",
+    "custom/mango-layout"
   ],
   "modules-center": [
-    "dwl/window"
+    "custom/mango-window"
   ],
   "modules-right": [
     "group/tray-drawer",
@@ -46,6 +47,27 @@
     "signal": 10,
     "format": "{text}",
     "escape": false,
+    "tooltip": false
+  },
+  "ext/workspaces": {
+    "format": "{name}",
+    "ignore-hidden": false,
+    "on-click": "activate",
+    "on-click-right": "deactivate",
+    "sort-by-id": true
+  },
+  "custom/mango-layout": {
+    "exec": "mmsg watch all-tags | jq --unbuffered -r 'first(.all_tags[] | select(.monitor == env.WAYBAR_OUTPUT_NAME).tags[] | select(.is_active).layout) // \"?\"'",
+    "restart-interval": 1,
+    "format": "[{}]",
+    "tooltip": false
+  },
+  "custom/mango-window": {
+    "exec": "mmsg watch focusing-client | jq --unbuffered -r '.title // empty'",
+    "restart-interval": 1,
+    "format": "{}",
+    "escape": true,
+    "max-length": 120,
     "tooltip": false
   }
 }

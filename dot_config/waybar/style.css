@@ -23,8 +23,9 @@ button:hover {
   box-shadow: none;
 }
 
-#tags,
-#window,
+#workspaces,
+#custom-mango-window,
+#custom-mango-layout,
 #custom-status,
 #group-tray-drawer,
 #custom-tray-toggle,
@@ -34,24 +35,24 @@ button:hover {
   min-height: 32px;
 }
 
-#tags button {
+#workspaces button {
   padding: 0 3px;
   background: #080808;
   color: #878787;
   font-weight: 400;
 }
 
-#tags button.occupied {
+#workspaces button:not(.hidden) {
   color: #d0d0d0;
   font-weight: 900;
 }
 
-#tags button.focused {
+#workspaces button.active {
   background: #222222;
   color: #eeeeee;
 }
 
-#tags button.urgent {
+#workspaces button.urgent {
   background: #770000;
   color: #eeeeee;
 }
@@ -82,17 +83,19 @@ button:hover {
   margin: 0 8px 0 0;
 }
 
-#window {
+#custom-mango-window {
   padding: 0 10px;
   color: #eeeeee;
   background: #080808;
 }
 
-#window.empty {
-  color: #878787;
-}
-
 #custom-status {
   padding: 0 10px;
   background: #080808;
+}
+
+#custom-mango-layout {
+  padding: 0 10px;
+  margin: 0;
+  color: #878787;
 }
