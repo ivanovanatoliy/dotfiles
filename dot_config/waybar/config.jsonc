@@ -7,8 +7,8 @@
   "height": 32,
   "spacing": 0,
   "modules-left": [
-    "ext/workspaces",
-    "custom/mango-layout"
+    "ext/workspaces"
+    // "custom/mango-layout"
   ],
   "modules-center": [
     "custom/mango-window"

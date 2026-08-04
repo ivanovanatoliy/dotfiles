@@ -40,5 +40,8 @@
     "workbench.layoutControl.enabled": false,
     "workbench.activityBar.location": "top",
     "window.customTitleBarVisibility": "never",
-    "workbench.colorTheme": "cursor-dark"
+    "workbench.colorTheme": "cursor-dark",
+    "files.exclude": {
+        "**/.git": false
+    }
 }

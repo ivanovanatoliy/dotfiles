@@ -7,7 +7,7 @@
 }
 
 window#waybar.mango-bar {
-  background: #080808;
+  background: rgba(8, 8, 8, 0.8);
   color: #eeeeee;
   border: none;
 }
@@ -30,7 +30,7 @@ button:hover {
 #group-tray-drawer,
 #custom-tray-toggle,
 #tray {
-  background: #080808;
+  background: rgba(8, 8, 8, 0);
   color: #eeeeee;
   min-height: 32px;
 }
@@ -38,7 +38,7 @@ button:hover {
 #workspaces button {
   min-width: 32px;
   padding: 0 3px;
-  background: #080808;
+  background: rgba(8, 8, 8, 0);
   color: #878787;
   font-weight: 400;
 }
@@ -59,19 +59,19 @@ button:hover {
 }
 
 #group-tray-drawer {
-  background: #080808;
+  background: rgba(8, 8, 8, 0);
 }
 
 #custom-tray-toggle {
   padding: 0 4px 0 10px;
   color: #eeeeee;
-  background: #080808;
+  background: rgba(8, 8, 8, 0);
   min-width: 0;
 }
 
 #tray {
   padding: 0;
-  background: #080808;
+  background: rgba(8, 8, 8, 0);
 }
 
 #group-tray-drawer .tray-child {
@@ -87,12 +87,12 @@ button:hover {
 #custom-mango-window {
   padding: 0 10px;
   color: #eeeeee;
-  background: #080808;
+  background: rgba(8, 8, 8, 0);
 }
 
 #custom-status {
   padding: 0 10px;
-  background: #080808;
+  background: rgba(8, 8, 8, 0);
 }
 
 #custom-mango-layout {
